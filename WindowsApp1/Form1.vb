@@ -92,7 +92,7 @@ Public Class Form1
                     writer.WriteLine("TRACK 20")
 
                 End Using
-                MessageBox.Show("The file " + NewFilePath + " has been created.")
+                MessageBox.Show(NewFilePath + "set file has been created.")
             Else
                 'MessageBox.Show("The file " + NewFilePath + " already exists.")
             End If
@@ -114,7 +114,7 @@ Public Class Form1
                 ListBoxTemp.Items.Add(System.IO.Path.GetFileName(file)) ' Add file name only
             Next
         Else
-            MessageBox.Show("The folder path does not exist.")
+            MessageBox.Show("The folder or path does not exist.")
         End If
 
         FilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
@@ -1527,10 +1527,43 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button21_Click_1(sender As Object, e As EventArgs) Handles Button21.Click
+    Private Sub Button21_Click_1(sender As Object, e As EventArgs) Handles ButtonExport.Click
 
-        ChooseFile()
+        Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) + "\" + DateTime.Now.ToString("yyyy-MM-dd")
+        Dim SourcePath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
 
+        ' Define source and destination folders
+        Dim sourceFolder As String = SourcePath
+        Dim destinationFolder As String = DestPath
+
+        ' Ensure the destination folder exists
+        If Not Directory.Exists(destinationFolder) Then
+            Directory.CreateDirectory(destinationFolder)
+        End If
+
+        ' Get all files from the source folder
+        Dim files As String() = Directory.GetFiles(sourceFolder)
+
+        ' Move each file to the destination folder
+        'For Each FilePath In files
+        For j = 1 To 4
+
+            Dim Filename As String
+
+            If j = 1 Then Filename = "GROUP_A"
+            If j = 2 Then Filename = "GROUP_B"
+            If j = 3 Then Filename = "GROUP_C"
+            If j = 4 Then Filename = "GROUP_D"
+
+            'Dim fileName As String = Path.GetFileName(FilePath) ' Extract the file name
+            Dim destinationPath As String = Path.Combine(destinationFolder, Filename)
+            File.Move(sourceFolder + "\" + Filename, destinationPath)
+            Console.WriteLine($"Moved: {FilePath} -> {destinationPath}")
+            'Next
+
+            FileCheck()
+
+        Next j
     End Sub
     Private Sub ChooseFile()
 
@@ -1545,11 +1578,73 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button22_Click_1(sender As Object, e As EventArgs) Handles Button22.Click
+    Private Sub Button22_Click_1(sender As Object, e As EventArgs) Handles ButtonImport.Click
+
+        Using folderDialog As New FolderBrowserDialog()
+            ' Set the description for the dialog
+            folderDialog.Description = "Select a folder"
+
+            ' Optional: Set the default selected path
+            folderDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
+            Dim SelectedFolder As String
+
+            ' Show the dialog and check if the user clicks OK
+            If folderDialog.ShowDialog() = DialogResult.OK Then
+                ' Get the selected folder path
+                selectedFolder = folderDialog.SelectedPath
+
+                ' Display the selected folder in a message box or set it in a label
+                ' Display a message box with Yes and No buttons
+                Dim result As DialogResult = MessageBox.Show("Proceed with Import?", "Import from " + SelectedFolder, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                ' Check the user's choice
+                If result = DialogResult.No Then
+                    Exit Sub
+                ElseIf result = DialogResult.Yes Then
+
+                End If
+            Else
+                MessageBox.Show("No folder was selected.", "Import")
+            End If
 
 
-        SaveFile()
+            Dim SourcePath As String = Selectedfolder
 
+            Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
+
+            ' Define source and destination folders
+            Dim sourceFolder As String = SourcePath
+            Dim destinationFolder As String = DestPath
+
+            ' Ensure the destination folder exists
+            If Not Directory.Exists(destinationFolder) Then
+                Directory.CreateDirectory(destinationFolder)
+            End If
+
+            ' Get all files from the source folder
+            Dim files As String() = Directory.GetFiles(sourceFolder)
+
+            ' Move each file to the destination folder
+            'For Each FilePath In files
+            For j = 1 To 4
+
+                Dim Filename As String
+
+                If j = 1 Then Filename = "GROUP_A"
+                If j = 2 Then Filename = "GROUP_B"
+                If j = 3 Then Filename = "GROUP_C"
+                If j = 4 Then Filename = "GROUP_D"
+
+                'Dim fileName As String = Path.GetFileName(FilePath) ' Extract the file name
+                Dim destinationPath As String = Path.Combine(destinationFolder, Filename)
+                File.Delete(destinationFolder + "\" + Filename)
+                File.Move(sourceFolder + "\" + Filename, destinationPath)
+                Console.WriteLine($"Moved: {FilePath} -> {destinationPath}")
+            Next
+
+        End Using
+
+        LoadFile()
 
     End Sub
 

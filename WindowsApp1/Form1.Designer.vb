@@ -31,8 +31,8 @@ Partial Class Form1
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
+        Me.ButtonExport = New System.Windows.Forms.Button()
+        Me.ButtonImport = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBoxTotalTime = New System.Windows.Forms.TextBox()
         Me.TextBoxTotalDuration = New System.Windows.Forms.TextBox()
@@ -40,8 +40,6 @@ Partial Class Form1
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.ListBoxTemp = New System.Windows.Forms.ListBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.AxWindowsMediaPlayer2 = New AxWMPLib.AxWindowsMediaPlayer()
-        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBoxElapsedTime = New System.Windows.Forms.TextBox()
         Me.NumericUpDownFade = New System.Windows.Forms.NumericUpDown()
@@ -88,11 +86,13 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.AxWindowsMediaPlayer2 = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.Panel1.SuspendLayout()
-        CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDownFade, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ListBoxMusic
@@ -166,35 +166,31 @@ Partial Class Form1
         Me.RadioButton4.Text = "GROUP D"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
-        'Button21
+        'ButtonExport
         '
-        Me.Button21.BackColor = System.Drawing.Color.Lime
-        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button21.Location = New System.Drawing.Point(864, 9)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(93, 36)
-        Me.Button21.TabIndex = 51
-        Me.Button21.Text = "LOAD"
-        Me.Button21.UseVisualStyleBackColor = False
-        Me.Button21.Visible = False
+        Me.ButtonExport.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ButtonExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonExport.Location = New System.Drawing.Point(859, 21)
+        Me.ButtonExport.Name = "ButtonExport"
+        Me.ButtonExport.Size = New System.Drawing.Size(197, 56)
+        Me.ButtonExport.TabIndex = 51
+        Me.ButtonExport.Text = "Export"
+        Me.ButtonExport.UseVisualStyleBackColor = False
         '
-        'Button22
+        'ButtonImport
         '
-        Me.Button22.BackColor = System.Drawing.Color.Red
-        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button22.Location = New System.Drawing.Point(951, 9)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(98, 36)
-        Me.Button22.TabIndex = 52
-        Me.Button22.Text = "SAVE"
-        Me.Button22.UseVisualStyleBackColor = False
-        Me.Button22.Visible = False
+        Me.ButtonImport.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ButtonImport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonImport.Location = New System.Drawing.Point(859, 75)
+        Me.ButtonImport.Name = "ButtonImport"
+        Me.ButtonImport.Size = New System.Drawing.Size(197, 56)
+        Me.ButtonImport.TabIndex = 52
+        Me.ButtonImport.Text = "Import"
+        Me.ButtonImport.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Button22)
-        Me.Panel1.Controls.Add(Me.Button21)
         Me.Panel1.Controls.Add(Me.RadioButton4)
         Me.Panel1.Controls.Add(Me.RadioButton3)
         Me.Panel1.Controls.Add(Me.RadioButton2)
@@ -261,32 +257,12 @@ Partial Class Form1
         Me.Label21.TabIndex = 79
         Me.Label21.Text = "Filter"
         '
-        'AxWindowsMediaPlayer2
-        '
-        Me.AxWindowsMediaPlayer2.Enabled = True
-        Me.AxWindowsMediaPlayer2.Location = New System.Drawing.Point(1207, 283)
-        Me.AxWindowsMediaPlayer2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.AxWindowsMediaPlayer2.Name = "AxWindowsMediaPlayer2"
-        Me.AxWindowsMediaPlayer2.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer2.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer2.Size = New System.Drawing.Size(66, 354)
-        Me.AxWindowsMediaPlayer2.TabIndex = 56
-        Me.AxWindowsMediaPlayer2.Visible = False
-        '
-        'AxWindowsMediaPlayer1
-        '
-        Me.AxWindowsMediaPlayer1.Enabled = True
-        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(1165, 191)
-        Me.AxWindowsMediaPlayer1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
-        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(66, 354)
-        Me.AxWindowsMediaPlayer1.TabIndex = 42
-        Me.AxWindowsMediaPlayer1.Visible = False
-        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.GroupBox1.Controls.Add(Me.ButtonImport)
         Me.GroupBox1.Controls.Add(Me.TextBoxElapsedTime)
+        Me.GroupBox1.Controls.Add(Me.ButtonExport)
         Me.GroupBox1.Controls.Add(Me.NumericUpDownFade)
         Me.GroupBox1.Controls.Add(Me.ButtonFade)
         Me.GroupBox1.Controls.Add(Me.ButtonSTOP)
@@ -323,7 +299,7 @@ Partial Class Form1
         '
         Me.ButtonFade.BackColor = System.Drawing.Color.DarkOrange
         Me.ButtonFade.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonFade.Location = New System.Drawing.Point(846, 21)
+        Me.ButtonFade.Location = New System.Drawing.Point(649, 21)
         Me.ButtonFade.Name = "ButtonFade"
         Me.ButtonFade.Size = New System.Drawing.Size(197, 111)
         Me.ButtonFade.TabIndex = 52
@@ -334,7 +310,7 @@ Partial Class Form1
         '
         Me.ButtonSTOP.BackColor = System.Drawing.Color.Red
         Me.ButtonSTOP.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSTOP.Location = New System.Drawing.Point(633, 21)
+        Me.ButtonSTOP.Location = New System.Drawing.Point(434, 21)
         Me.ButtonSTOP.Name = "ButtonSTOP"
         Me.ButtonSTOP.Size = New System.Drawing.Size(197, 111)
         Me.ButtonSTOP.TabIndex = 51
@@ -833,6 +809,28 @@ Partial Class Form1
         Me.Button1.Text = "TRACK 1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'AxWindowsMediaPlayer2
+        '
+        Me.AxWindowsMediaPlayer2.Enabled = True
+        Me.AxWindowsMediaPlayer2.Location = New System.Drawing.Point(1207, 283)
+        Me.AxWindowsMediaPlayer2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.AxWindowsMediaPlayer2.Name = "AxWindowsMediaPlayer2"
+        Me.AxWindowsMediaPlayer2.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer2.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWindowsMediaPlayer2.Size = New System.Drawing.Size(66, 354)
+        Me.AxWindowsMediaPlayer2.TabIndex = 56
+        Me.AxWindowsMediaPlayer2.Visible = False
+        '
+        'AxWindowsMediaPlayer1
+        '
+        Me.AxWindowsMediaPlayer1.Enabled = True
+        Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(1165, 191)
+        Me.AxWindowsMediaPlayer1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.AxWindowsMediaPlayer1.Name = "AxWindowsMediaPlayer1"
+        Me.AxWindowsMediaPlayer1.OcxState = CType(resources.GetObject("AxWindowsMediaPlayer1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.AxWindowsMediaPlayer1.Size = New System.Drawing.Size(66, 354)
+        Me.AxWindowsMediaPlayer1.TabIndex = 42
+        Me.AxWindowsMediaPlayer1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -902,11 +900,11 @@ Partial Class Form1
         Me.Text = "Simple Gig Playout Platform"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.NumericUpDownFade, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -919,8 +917,8 @@ Partial Class Form1
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents Button21 As Button
-    Friend WithEvents Button22 As Button
+    Friend WithEvents ButtonExport As Button
+    Friend WithEvents ButtonImport As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TextBoxTotalDuration As TextBox
     Friend WithEvents TextBoxActive As TextBox
