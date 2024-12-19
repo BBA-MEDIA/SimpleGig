@@ -88,11 +88,14 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.AxWindowsMediaPlayer2 = New AxWMPLib.AxWindowsMediaPlayer()
         Me.AxWindowsMediaPlayer1 = New AxWMPLib.AxWindowsMediaPlayer()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDownFade, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ListBoxMusic
@@ -112,7 +115,7 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 28)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1498, 24)
         Me.MenuStrip1.TabIndex = 46
@@ -831,6 +834,22 @@ Partial Class Form1
         Me.AxWindowsMediaPlayer1.TabIndex = 42
         Me.AxWindowsMediaPlayer1.Visible = False
         '
+        'MenuStrip2
+        '
+        Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(1498, 28)
+        Me.MenuStrip2.TabIndex = 239
+        Me.MenuStrip2.Text = "MenuStrip2"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.AboutToolStripMenuItem.Text = "About"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -886,6 +905,7 @@ Partial Class Form1
         Me.Controls.Add(Me.AxWindowsMediaPlayer1)
         Me.Controls.Add(Me.ListBoxMusic)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.Controls.Add(Me.TextBoxActive)
         Me.Controls.Add(Me.TextBoxTotalDuration)
         Me.Controls.Add(Me.ListBoxTemp)
@@ -905,6 +925,8 @@ Partial Class Form1
         CType(Me.NumericUpDownFade, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AxWindowsMediaPlayer2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -973,4 +995,6 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
 End Class

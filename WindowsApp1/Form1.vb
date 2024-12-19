@@ -1,4 +1,5 @@
-﻿Imports System.Drawing.Text
+﻿Imports System.Deployment.Application
+Imports System.Drawing.Text
 Imports System.IO
 Imports System.Reflection.Emit
 Imports System.Threading
@@ -1591,7 +1592,7 @@ Public Class Form1
             ' Show the dialog and check if the user clicks OK
             If folderDialog.ShowDialog() = DialogResult.OK Then
                 ' Get the selected folder path
-                selectedFolder = folderDialog.SelectedPath
+                SelectedFolder = folderDialog.SelectedPath
 
                 ' Display the selected folder in a message box or set it in a label
                 ' Display a message box with Yes and No buttons
@@ -1608,7 +1609,7 @@ Public Class Form1
             End If
 
 
-            Dim SourcePath As String = Selectedfolder
+            Dim SourcePath As String = SelectedFolder
 
             Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
 
@@ -1676,8 +1677,8 @@ Public Class Form1
             If j = 1 Then Label1.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
             If j = 2 Then Label2.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
             If j = 3 Then Label3.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 4 Then Label4.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss")+ ")"
-            If j = 5 Then Label5.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss")+ ")"
+            If j = 4 Then Label4.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
+            If j = 5 Then Label5.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
             If j = 6 Then Label6.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
             If j = 7 Then Label7.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
             If j = 8 Then Label8.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
@@ -1758,4 +1759,9 @@ Public Class Form1
 
     End Sub
 
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+
+        MsgBox("Vwrsion: " & My.Application.Info.Version.ToString)
+
+    End Sub
 End Class
