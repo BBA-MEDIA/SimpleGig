@@ -1674,26 +1674,26 @@ Public Class Form1
             Dim CumulativeDuration As TimeSpan = TimeSpan.FromSeconds(TotalDuration)
 
 
-            If j = 1 Then Label1.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 2 Then Label2.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 3 Then Label3.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 4 Then Label4.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 5 Then Label5.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 6 Then Label6.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 7 Then Label7.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 8 Then Label8.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 9 Then Label9.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 10 Then Label10.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 11 Then Label11.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 12 Then Label12.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 13 Then Label13.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 14 Then Label14.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 15 Then Label15.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 16 Then Label16.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 17 Then Label17.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 18 Then Label18.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 19 Then Label19.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
-            If j = 20 Then Label20.Text = Trackduration.ToString("mm\:ss") + "(" + CumulativeDuration.ToString("hh\:mm\:ss") + ")"
+            If j = 1 Then Label1.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 2 Then Label2.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 3 Then Label3.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 4 Then Label4.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 5 Then Label5.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 6 Then Label6.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 7 Then Label7.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 8 Then Label8.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 9 Then Label9.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 10 Then Label10.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 11 Then Label11.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 12 Then Label12.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 13 Then Label13.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 14 Then Label14.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 15 Then Label15.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 16 Then Label16.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 17 Then Label17.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 18 Then Label18.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 19 Then Label19.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
+            If j = 20 Then Label20.Text = Trackduration.ToString("mm\:ss") + " [" + CumulativeDuration.ToString("hh\:mm\:ss") + "]"
 
             TotalDuration = TotalDuration + durationInSeconds
 
@@ -1703,7 +1703,7 @@ Public Class Form1
         ' Convert and display in a readable format
         Dim Finalduration As TimeSpan = TimeSpan.FromSeconds(TotalDuration)
         'MessageBox.Show("Duration: " & Finalduration.ToString("hh\:mm\:ss"))
-        TextBoxTotalTime.Text = "Page Total: " + Finalduration.ToString("hh\:mm\:ss")
+        TextBoxTotalTime.Text = "Set Total: " + Finalduration.ToString("hh\:mm\:ss")
 
     End Sub
 
