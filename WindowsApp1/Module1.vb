@@ -12,5 +12,5 @@ Module Module1
     Public wmp As New WindowsMediaPlayer
     Public Buttons(20)
     Public DroppedText As String
-
+    Public ExportYes As Integer
 End Module

@@ -1,4 +1,5 @@
 ﻿Imports System.Deployment.Application
+Imports System.Drawing.Imaging
 Imports System.Drawing.Text
 Imports System.IO
 Imports System.Reflection.Emit
@@ -93,7 +94,7 @@ Public Class Form1
                     writer.WriteLine("TRACK 20")
 
                 End Using
-                MessageBox.Show(NewFilePath + "set file has been created.")
+                If ExportYes = 0 Then MessageBox.Show("A new " + MediaFile + " Set file has been created.", "New Group")
             Else
                 'MessageBox.Show("The file " + NewFilePath + " already exists.")
             End If
@@ -175,7 +176,7 @@ Public Class Form1
 
     Private Sub Button2_MouseDown(sender As Object, e As MouseEventArgs) Handles Button2.MouseDown
 
-        If Button1.Text = "TRACK 2" Then Exit Sub
+        If Button2.Text = "TRACK 2" Then Exit Sub
         Button2.Refresh()
         If TextBoxSearch.Enabled = False And Button2.BackColor = Color.White Then Exit Sub
 
@@ -251,7 +252,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button_MouseDown(sender As Object, e As MouseEventArgs) Handles Button4.MouseDown
+    Private Sub Button4_MouseDown(sender As Object, e As MouseEventArgs) Handles Button4.MouseDown
 
         If Button4.Text = "TRACK 4" Then Exit Sub
         Button4.Refresh()
@@ -951,12 +952,16 @@ Public Class Form1
             TextBoxSearch.Enabled = False
             Panel1.Enabled = False
             ListBoxMusic.Enabled = False
+            ButtonExport.Enabled = False
+            ButtonImport.Enabled = False
         Else
             ' Media is not playing
             TextBoxActive.Text = ("Media is not active.")
             TextBoxSearch.Enabled = True
             Panel1.Enabled = True
             ListBoxMusic.Enabled = True
+            ButtonExport.Enabled = True
+            ButtonImport.Enabled = True
         End If
 
 
@@ -1135,7 +1140,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button3.Text = droppedText
         SaveFile()
         CurrentButton = 3
 
@@ -1151,7 +1156,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button4.Text = droppedText
         SaveFile()
         CurrentButton = 4
 
@@ -1167,7 +1172,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button5.Text = droppedText
         SaveFile()
         CurrentButton = 5
 
@@ -1183,7 +1188,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button6.Text = droppedText
         SaveFile()
         CurrentButton = 6
 
@@ -1199,7 +1204,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button7.Text = droppedText
         SaveFile()
         CurrentButton = 7
 
@@ -1215,7 +1220,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button8.Text = droppedText
         SaveFile()
         CurrentButton = 8
 
@@ -1231,7 +1236,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button9.Text = droppedText
         SaveFile()
         CurrentButton = 9
 
@@ -1247,7 +1252,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button10.Text = droppedText
         SaveFile()
         CurrentButton = 10
 
@@ -1263,7 +1268,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button11.Text = droppedText
         SaveFile()
         CurrentButton = 11
 
@@ -1279,7 +1284,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button12.Text = droppedText
         SaveFile()
         CurrentButton = 12
 
@@ -1296,7 +1301,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button13.Text = droppedText
         SaveFile()
         CurrentButton = 13
 
@@ -1313,7 +1318,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button14.Text = droppedText
         SaveFile()
         CurrentButton = 14
 
@@ -1330,7 +1335,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button15.Text = droppedText
         SaveFile()
         CurrentButton = 15
 
@@ -1347,7 +1352,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button16.Text = droppedText
         SaveFile()
         CurrentButton = 16
 
@@ -1364,7 +1369,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button17.Text = droppedText
         SaveFile()
         CurrentButton = 17
 
@@ -1380,7 +1385,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button18.Text = droppedText
         SaveFile()
         CurrentButton = 18
 
@@ -1397,7 +1402,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button19.Text = droppedText
         SaveFile()
         CurrentButton = 19
 
@@ -1414,7 +1419,7 @@ Public Class Form1
 
         ' Retrieve the dropped text and set it into the TextBox
         Dim droppedText As String = e.Data.GetData(DataFormats.Text).ToString()
-        Button1.Text = droppedText
+        Button20.Text = droppedText
         SaveFile()
         CurrentButton = 20
 
@@ -1484,11 +1489,14 @@ Public Class Form1
                     Button20.Text = reader.ReadLine()
                 End Using
             Else
-                MessageBox.Show("File not found!")
+                'MessageBox.Show("File not found!")
                 Exit Sub
             End If
 
         Catch
+
+            MessageBox.Show("File not Found at this location.")
+            Exit Sub
 
         End Try
 
@@ -1530,7 +1538,27 @@ Public Class Form1
 
     Private Sub Button21_Click_1(sender As Object, e As EventArgs) Handles ButtonExport.Click
 
-        Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) + "\" + DateTime.Now.ToString("yyyy-MM-dd")
+        'Dim result As DialogResult = MessageBox.Show("Export will empty and refresh tracks. Proceed?", "Export", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        ' Check the user's choice
+        'If result = DialogResult.No Then
+
+        'Exit Sub
+
+        'End If
+
+        Dim ExportName As String
+        ExportName = InputBox("Export Folder Name:", "Export", " ")
+
+        If ExportName = " " Then
+            MessageBox.Show("You must enter a name to continue.")
+            Exit Sub
+        ElseIf ExportName = "" Then
+            Exit Sub
+        End If
+
+
+        Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) + "\" + ExportName 'DateTime.Now.ToString("yyyy-MM-dd")
         Dim SourcePath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
 
         ' Define source and destination folders
@@ -1562,9 +1590,24 @@ Public Class Form1
             Console.WriteLine($"Moved: {FilePath} -> {destinationPath}")
             'Next
 
-            FileCheck()
+        Next j
+
+        For j = 1 To 20
+
+            Buttons(j).text = "TRACK" + Str(j)
 
         Next j
+
+        ChooseFile()
+
+        ExportYes = 1
+
+        FileCheck()
+
+        ExportYes = 0
+
+        CalculateTotalTime()
+
     End Sub
     Private Sub ChooseFile()
 
@@ -1581,71 +1624,86 @@ Public Class Form1
 
     Private Sub Button22_Click_1(sender As Object, e As EventArgs) Handles ButtonImport.Click
 
-        Using folderDialog As New FolderBrowserDialog()
-            ' Set the description for the dialog
-            folderDialog.Description = "Select a folder"
+        Try
 
-            ' Optional: Set the default selected path
-            folderDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
-            Dim SelectedFolder As String
+            Using folderDialog As New FolderBrowserDialog()
+                ' Set the description for the dialog
+                folderDialog.Description = "Select a folder"
 
-            ' Show the dialog and check if the user clicks OK
-            If folderDialog.ShowDialog() = DialogResult.OK Then
-                ' Get the selected folder path
-                SelectedFolder = folderDialog.SelectedPath
+                ' Optional: Set the default selected path
+                folderDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
+                Dim SelectedFolder As String
 
-                ' Display the selected folder in a message box or set it in a label
-                ' Display a message box with Yes and No buttons
-                Dim result As DialogResult = MessageBox.Show("Proceed with Import?", "Import from " + SelectedFolder, MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                ' Show the dialog and check if the user clicks OK
+                If folderDialog.ShowDialog() = DialogResult.OK Then
+                    ' Get the selected folder path
+                    SelectedFolder = folderDialog.SelectedPath
 
-                ' Check the user's choice
-                If result = DialogResult.No Then
-                    Exit Sub
-                ElseIf result = DialogResult.Yes Then
+                    ' Display the selected folder in a message box or set it in a label
+                    ' Display a message box with Yes and No buttons
+                    Dim result As DialogResult = MessageBox.Show("Proceed with Import?", "Import", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
+                    ' Check the user's choice
+                    If result = DialogResult.No Then
+                        Exit Sub
+                    ElseIf result = DialogResult.Yes Then
+
+                    End If
+                Else
+                    MessageBox.Show("No folder was selected.", "Import")
                 End If
-            Else
-                MessageBox.Show("No folder was selected.", "Import")
-            End If
 
 
-            Dim SourcePath As String = SelectedFolder
+                Dim SourcePath As String = SelectedFolder
 
-            Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
+                Dim DestPath As String = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic)
 
-            ' Define source and destination folders
-            Dim sourceFolder As String = SourcePath
-            Dim destinationFolder As String = DestPath
+                ' Define source and destination folders
+                Dim sourceFolder As String = SourcePath
+                Dim destinationFolder As String = DestPath
 
-            ' Ensure the destination folder exists
-            If Not Directory.Exists(destinationFolder) Then
-                Directory.CreateDirectory(destinationFolder)
-            End If
+                ' Ensure the destination folder exists
+                If Not Directory.Exists(destinationFolder) Then
+                    Directory.CreateDirectory(destinationFolder)
+                End If
 
-            ' Get all files from the source folder
-            Dim files As String() = Directory.GetFiles(sourceFolder)
+                ' Get all files from the source folder
+                Dim files As String() = Directory.GetFiles(sourceFolder)
 
-            ' Move each file to the destination folder
-            'For Each FilePath In files
-            For j = 1 To 4
+                ' Move each file to the destination folder
+                'For Each FilePath In files
+                For j = 1 To 4
 
-                Dim Filename As String
+                    Dim Filename As String
 
-                If j = 1 Then Filename = "GROUP_A"
-                If j = 2 Then Filename = "GROUP_B"
-                If j = 3 Then Filename = "GROUP_C"
-                If j = 4 Then Filename = "GROUP_D"
+                    If j = 1 Then Filename = "GROUP_A"
+                    If j = 2 Then Filename = "GROUP_B"
+                    If j = 3 Then Filename = "GROUP_C"
+                    If j = 4 Then Filename = "GROUP_D"
 
-                'Dim fileName As String = Path.GetFileName(FilePath) ' Extract the file name
-                Dim destinationPath As String = Path.Combine(destinationFolder, Filename)
-                File.Delete(destinationFolder + "\" + Filename)
-                File.Move(sourceFolder + "\" + Filename, destinationPath)
-                Console.WriteLine($"Moved: {FilePath} -> {destinationPath}")
-            Next
+                    'Dim fileName As String = Path.GetFileName(FilePath) ' Extract the file name
+                    Dim destinationPath As String = Path.Combine(destinationFolder, Filename)
+                    File.Delete(destinationFolder + "\" + Filename)
+                    File.Move(sourceFolder + "\" + Filename, destinationPath)
+                    Console.WriteLine($"Moved: {FilePath} -> {destinationPath}")
+                Next
 
-        End Using
+            End Using
+
+        Catch
+
+            MessageBox.Show("File not Found at this location.")
+            Exit Sub
+
+        End Try
+
 
         LoadFile()
+
+        RadioButton1.Checked = True
+        ChooseFile()
+        CalculateTotalTime()
+
 
     End Sub
 
@@ -1764,4 +1822,5 @@ Public Class Form1
         MsgBox("Vwrsion: " & My.Application.Info.Version.ToString)
 
     End Sub
+
 End Class

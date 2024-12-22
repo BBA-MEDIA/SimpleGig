@@ -5,7 +5,7 @@
 
     Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
 
-        Dim result As DialogResult = MessageBox.Show("Are you sureyou wish to remove this track?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As DialogResult = MessageBox.Show("Do you want to remove this track?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         ' Check the user's choice
         If result = DialogResult.Yes Then
@@ -22,7 +22,7 @@
 
     Private Sub ButtonShuffle_Click(sender As Object, e As EventArgs) Handles ButtonShuffleR.Click
 
-        Dim result As DialogResult = MessageBox.Show("Are you sure you wish to shuffle tracks right? Track 20 will be removed.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As DialogResult = MessageBox.Show("Do you want to shuffle tracks right? Track 20 will be removed.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         ' Check the user's choice
         If result = DialogResult.Yes Then
@@ -51,7 +51,7 @@
 
     Private Sub ButtonShuffleL_Click(sender As Object, e As EventArgs) Handles ButtonShuffleL.Click
 
-        Dim result As DialogResult = MessageBox.Show("Are you sure you wish to shuffle tracks left? Track" + Str(CurrentButton - 1) + " Will be removed.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As DialogResult = MessageBox.Show("Do you want to shuffle tracks left? Track" + Str(CurrentButton - 1) + " Will be removed.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         ' Check the user's choice
         If result = DialogResult.Yes Then

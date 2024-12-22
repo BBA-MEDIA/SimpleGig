@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("SimpleGig")>
 <Assembly: AssemblyDescription("Media Playout App")>
 <Assembly: AssemblyCompany("www.bba.media")>
-<Assembly: AssemblyProduct("SimpleGog")>
+<Assembly: AssemblyProduct("SimpleGig")>
 <Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
@@ -28,5 +28,5 @@ Imports System.Runtime.InteropServices
 '      Revision
 '
 
-<Assembly: AssemblyVersion("1.0.1.15")>
-<Assembly: AssemblyFileVersion("1.0.1.15")>
+<Assembly: AssemblyVersion("1.0.1.18")>
+<Assembly: AssemblyFileVersion("1.0.1.18")>
