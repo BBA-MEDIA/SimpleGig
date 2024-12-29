@@ -1819,7 +1819,7 @@ Public Class Form1
 
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
 
-        MsgBox("Vwrsion: " & My.Application.Info.Version.ToString)
+        MsgBox("Version: " & My.Application.Info.Version.ToString)
 
     End Sub
 

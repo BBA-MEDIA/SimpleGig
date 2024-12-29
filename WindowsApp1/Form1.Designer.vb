@@ -115,9 +115,9 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 28)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 30)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1498, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1498, 30)
         Me.MenuStrip1.TabIndex = 46
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -859,14 +859,14 @@ Partial Class Form1
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(1498, 28)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1498, 30)
         Me.MenuStrip2.TabIndex = 239
         Me.MenuStrip2.Text = "MenuStrip2"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'AxWindowsMediaPlayer2
@@ -952,6 +952,7 @@ Partial Class Form1
         Me.Controls.Add(Me.ListBoxTemp)
         Me.Enabled = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
