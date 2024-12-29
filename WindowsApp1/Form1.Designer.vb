@@ -102,10 +102,10 @@ Partial Class Form1
         '
         Me.ListBoxMusic.FormattingEnabled = True
         Me.ListBoxMusic.ItemHeight = 16
-        Me.ListBoxMusic.Location = New System.Drawing.Point(1105, 96)
+        Me.ListBoxMusic.Location = New System.Drawing.Point(1105, 128)
         Me.ListBoxMusic.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListBoxMusic.Name = "ListBoxMusic"
-        Me.ListBoxMusic.Size = New System.Drawing.Size(360, 692)
+        Me.ListBoxMusic.Size = New System.Drawing.Size(360, 708)
         Me.ListBoxMusic.TabIndex = 2
         '
         'Timer1
@@ -115,9 +115,9 @@ Partial Class Form1
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 30)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 28)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1498, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1498, 24)
         Me.MenuStrip1.TabIndex = 46
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -171,22 +171,22 @@ Partial Class Form1
         '
         'ButtonExport
         '
-        Me.ButtonExport.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ButtonExport.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonExport.Location = New System.Drawing.Point(838, 21)
+        Me.ButtonExport.Location = New System.Drawing.Point(1020, 4)
         Me.ButtonExport.Name = "ButtonExport"
-        Me.ButtonExport.Size = New System.Drawing.Size(197, 56)
+        Me.ButtonExport.Size = New System.Drawing.Size(197, 45)
         Me.ButtonExport.TabIndex = 51
         Me.ButtonExport.Text = "Export"
         Me.ButtonExport.UseVisualStyleBackColor = False
         '
         'ButtonImport
         '
-        Me.ButtonImport.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.ButtonImport.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonImport.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonImport.Location = New System.Drawing.Point(838, 75)
+        Me.ButtonImport.Location = New System.Drawing.Point(1223, 4)
         Me.ButtonImport.Name = "ButtonImport"
-        Me.ButtonImport.Size = New System.Drawing.Size(197, 56)
+        Me.ButtonImport.Size = New System.Drawing.Size(197, 45)
         Me.ButtonImport.TabIndex = 52
         Me.ButtonImport.Text = "Import"
         Me.ButtonImport.UseVisualStyleBackColor = False
@@ -194,13 +194,15 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.ButtonImport)
         Me.Panel1.Controls.Add(Me.RadioButton4)
         Me.Panel1.Controls.Add(Me.RadioButton3)
+        Me.Panel1.Controls.Add(Me.ButtonExport)
         Me.Panel1.Controls.Add(Me.RadioButton2)
         Me.Panel1.Controls.Add(Me.RadioButton1)
         Me.Panel1.Location = New System.Drawing.Point(33, 30)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1050, 55)
+        Me.Panel1.Size = New System.Drawing.Size(1433, 55)
         Me.Panel1.TabIndex = 53
         '
         'TextBoxTotalTime
@@ -209,10 +211,10 @@ Partial Class Form1
         Me.TextBoxTotalTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxTotalTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxTotalTime.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.TextBoxTotalTime.Location = New System.Drawing.Point(1106, 792)
+        Me.TextBoxTotalTime.Location = New System.Drawing.Point(769, 60)
         Me.TextBoxTotalTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxTotalTime.Name = "TextBoxTotalTime"
-        Me.TextBoxTotalTime.Size = New System.Drawing.Size(360, 41)
+        Me.TextBoxTotalTime.Size = New System.Drawing.Size(275, 41)
         Me.TextBoxTotalTime.TabIndex = 46
         Me.TextBoxTotalTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -235,7 +237,7 @@ Partial Class Form1
         '
         Me.TextBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxSearch.Location = New System.Drawing.Point(1165, 47)
+        Me.TextBoxSearch.Location = New System.Drawing.Point(1166, 92)
         Me.TextBoxSearch.Name = "TextBoxSearch"
         Me.TextBoxSearch.Size = New System.Drawing.Size(300, 30)
         Me.TextBoxSearch.TabIndex = 57
@@ -255,7 +257,7 @@ Partial Class Form1
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label21.Location = New System.Drawing.Point(1101, 51)
+        Me.Label21.Location = New System.Drawing.Point(1100, 97)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(54, 25)
         Me.Label21.TabIndex = 79
@@ -264,13 +266,12 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.GroupBox1.Controls.Add(Me.ButtonImport)
         Me.GroupBox1.Controls.Add(Me.TextBoxElapsedTime)
-        Me.GroupBox1.Controls.Add(Me.ButtonExport)
         Me.GroupBox1.Controls.Add(Me.NumericUpDownFade)
         Me.GroupBox1.Controls.Add(Me.ButtonFade)
         Me.GroupBox1.Controls.Add(Me.ButtonSTOP)
         Me.GroupBox1.Controls.Add(Me.TextBoxRemainingTime)
+        Me.GroupBox1.Controls.Add(Me.TextBoxTotalTime)
         Me.GroupBox1.Location = New System.Drawing.Point(33, 689)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1050, 149)
@@ -283,7 +284,7 @@ Partial Class Form1
         Me.TextBoxElapsedTime.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.TextBoxElapsedTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxElapsedTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxElapsedTime.Location = New System.Drawing.Point(13, 25)
+        Me.TextBoxElapsedTime.Location = New System.Drawing.Point(13, 21)
         Me.TextBoxElapsedTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxElapsedTime.Name = "TextBoxElapsedTime"
         Me.TextBoxElapsedTime.Size = New System.Drawing.Size(344, 41)
@@ -303,7 +304,7 @@ Partial Class Form1
         '
         Me.ButtonFade.BackColor = System.Drawing.Color.DarkOrange
         Me.ButtonFade.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonFade.Location = New System.Drawing.Point(628, 21)
+        Me.ButtonFade.Location = New System.Drawing.Point(566, 21)
         Me.ButtonFade.Name = "ButtonFade"
         Me.ButtonFade.Size = New System.Drawing.Size(197, 111)
         Me.ButtonFade.TabIndex = 52
@@ -314,7 +315,7 @@ Partial Class Form1
         '
         Me.ButtonSTOP.BackColor = System.Drawing.Color.Red
         Me.ButtonSTOP.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonSTOP.Location = New System.Drawing.Point(413, 21)
+        Me.ButtonSTOP.Location = New System.Drawing.Point(363, 21)
         Me.ButtonSTOP.Name = "ButtonSTOP"
         Me.ButtonSTOP.Size = New System.Drawing.Size(197, 111)
         Me.ButtonSTOP.TabIndex = 51
@@ -326,7 +327,7 @@ Partial Class Form1
         Me.TextBoxRemainingTime.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.TextBoxRemainingTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBoxRemainingTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxRemainingTime.Location = New System.Drawing.Point(13, 87)
+        Me.TextBoxRemainingTime.Location = New System.Drawing.Point(13, 91)
         Me.TextBoxRemainingTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBoxRemainingTime.Name = "TextBoxRemainingTime"
         Me.TextBoxRemainingTime.Size = New System.Drawing.Size(344, 41)
@@ -859,14 +860,14 @@ Partial Class Form1
         Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
-        Me.MenuStrip2.Size = New System.Drawing.Size(1498, 30)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1498, 28)
         Me.MenuStrip2.TabIndex = 239
         Me.MenuStrip2.Text = "MenuStrip2"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'AxWindowsMediaPlayer2
@@ -939,7 +940,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.TextBoxTotalTime)
         Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.AxWindowsMediaPlayer2)
         Me.Controls.Add(Me.Panel1)
